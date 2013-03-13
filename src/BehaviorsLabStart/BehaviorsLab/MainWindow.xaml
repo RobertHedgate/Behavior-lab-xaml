@@ -1,0 +1,35 @@
+﻿<Window x:Class="BehaviorsLab.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+        xmlns:behaviors="clr-namespace:BehaviorsLab.Behaviors"
+        Title="BehaviorsLab" Height="500" Width="525">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="50*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBox Grid.Row="0" behaviors:DigitsOnlyBehavior.IsDigitOnly="True" Margin="6"/>
+
+        <Border Grid.Row="1" Background="LightBlue" Margin="6">
+            <TextBlock Text="Drag me around! (Attached Behavior)" />
+        </Border>
+
+        <Border Grid.Row="1" Grid.Column="1" Background="LightCoral" Margin="6">
+            <TextBlock Text="Drag me around! (Blend Behaviour)" />
+        </Border>
+
+        <Button Grid.Row="2" Content="Select last item" Click="ButtonBase_OnClick" Margin="6"/>
+        <ListBox x:Name="List" Grid.Row="3" ItemsSource="{Binding StringList}" Height="70" Margin="6" PreviewMouseLeftButtonDown="List_OnPreviewMouseLeftButtonDown" PreviewMouseMove="List_OnPreviewMouseMove" PreviewMouseLeftButtonUp="List_OnPreviewMouseLeftButtonUp"/>
+        <ListBox x:Name="List2" Grid.Row="3" Grid.Column="1" Height="70" Margin="6" Drop="List2_OnDrop" AllowDrop="True"/>
+
+    </Grid>
+</Window>
