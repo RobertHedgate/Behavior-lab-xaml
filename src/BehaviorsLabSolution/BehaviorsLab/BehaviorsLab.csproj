@@ -64,7 +64,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Behaviors\BringIntoViewBehavior.cs" />
     <Compile Include="Behaviors\DigitsOnlyBehavior.cs" />
+    <Compile Include="Behaviors\DragBehavior.cs" />
+    <Compile Include="Behaviors\DragBehaviorBlend.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
