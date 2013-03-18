@@ -27,14 +27,22 @@
 
 		<Border Grid.Row="1" Grid.Column="1" Background="LightCoral" Margin="6">
             <e:Interaction.Behaviors>
-                <behaviors:DragBehaviorBlend/>
+                <behaviors:DragBlendBehavior/>
             </e:Interaction.Behaviors>
             <TextBlock Text="Drag me around! (Blend Behaviour)"/>
 		</Border>
 
 		<Button Grid.Row="2" Content="Select last item" Click="ButtonBase_OnClick" Margin="6"/>
-		<ListBox x:Name="List" Grid.Row="3" ItemsSource="{Binding StringList}" Height="70" Margin="6" PreviewMouseLeftButtonDown="List_OnPreviewMouseLeftButtonDown" PreviewMouseMove="List_OnPreviewMouseMove" PreviewMouseLeftButtonUp="List_OnPreviewMouseLeftButtonUp" behaviors:BringIntoViewBehavior.IsBringIntoView="True"/>
-		<ListBox x:Name="List2" Grid.Row="3" Grid.Column="1" Height="70" Margin="6" Drop="List2_OnDrop" AllowDrop="True"/>
- 
-	</Grid>
+		<ListBox x:Name="List" Grid.Row="3" ItemsSource="{Binding StringList}" Height="70" Margin="6" behaviors:BringIntoViewBehavior.IsBringIntoView="True">
+            <e:Interaction.Behaviors>
+                <behaviors:ListDragBlendBehavior/>
+            </e:Interaction.Behaviors>
+        </ListBox>
+		<ListBox x:Name="List2" Grid.Row="3" Grid.Column="1" Height="70" Margin="6">
+            <e:Interaction.Behaviors>
+                <behaviors:ListDropBlendBehavior/>
+            </e:Interaction.Behaviors>
+        </ListBox>
+
+    </Grid>
 </Window>

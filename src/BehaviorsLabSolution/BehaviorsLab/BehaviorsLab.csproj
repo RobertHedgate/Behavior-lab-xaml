@@ -65,9 +65,11 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Behaviors\BringIntoViewBehavior.cs" />
+    <Compile Include="Behaviors\ListDropBlendBehavior.cs" />
+    <Compile Include="Behaviors\ListDragBlendBehavior.cs" />
     <Compile Include="Behaviors\DigitsOnlyBehavior.cs" />
     <Compile Include="Behaviors\DragBehavior.cs" />
-    <Compile Include="Behaviors\DragBehaviorBlend.cs" />
+    <Compile Include="Behaviors\DragBlendBehavior.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

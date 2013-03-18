@@ -5,7 +5,7 @@ using System.Windows.Interactivity;
 
 namespace BehaviorsLab.Behaviors
 {
-    class DragBehaviorBlend : Behavior<UIElement>
+    class DragBlendBehavior : Behavior<UIElement>
     {        
         protected override void OnAttached()
         {
