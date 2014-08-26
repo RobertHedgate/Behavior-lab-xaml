@@ -19,7 +19,12 @@
 			<ColumnDefinition Width="50*"/>
 		</Grid.ColumnDefinitions>
         
-		<TextBox Grid.Row="0" behaviors:DigitsOnlyBehavior.IsDigitOnly="True" Margin="6"/>
+        <StackPanel Grid.Row="0">
+            <TextBox behaviors:DigitsOnlyBehavior.IsDigitOnly="True" Margin="6"/>
+            <TextBox behaviors:DigitsOnlyBehavior.IsDigitOnly="False" Margin="6"/>
+            <TextBox x:Name="SecondIsDigit" behaviors:DigitsOnlyBehavior.IsDigitOnly="True" Margin="6"/>
+            <Button Content="IsDigit False" Click="IsDigitFalseOnClick"></Button>
+        </StackPanel>
 
 		<Border Grid.Row="1" Background="LightBlue" Margin="6" behaviors:DragBehavior.Drag="True">
 			<TextBlock Text="Drag me around! (Attached Behavior)" />

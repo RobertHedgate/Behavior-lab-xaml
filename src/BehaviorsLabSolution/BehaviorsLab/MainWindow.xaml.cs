@@ -4,6 +4,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
+using BehaviorsLab.Behaviors;
 
 namespace BehaviorsLab
 {
@@ -25,6 +26,11 @@ namespace BehaviorsLab
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
         {
             List.SelectedIndex = List.Items.Count - 1;
+        }
+
+        private void IsDigitFalseOnClick(object sender, RoutedEventArgs e)
+        {
+            DigitsOnlyBehavior.SetIsDigitOnly(SecondIsDigit, false);
         }
     }
 }
